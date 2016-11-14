@@ -16,6 +16,18 @@ func (_ tApp) Index(
 }
 
 
+type tGoals struct {}
+var Goals tGoals
+
+
+func (_ tGoals) Index(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Goals.Index", args).Url
+}
+
+
 type tStatic struct {}
 var Static tStatic
 

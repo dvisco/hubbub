@@ -43,6 +43,20 @@ func main() {
 			
 		})
 	
+	revel.RegisterController((*controllers.Goals)(nil),
+		[]*revel.MethodType{
+			&revel.MethodType{
+				Name: "Index",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					10: []string{ 
+					},
+				},
+			},
+			
+		})
+	
 	revel.RegisterController((*controllers0.Static)(nil),
 		[]*revel.MethodType{
 			&revel.MethodType{
